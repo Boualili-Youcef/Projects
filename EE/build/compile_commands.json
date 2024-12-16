@@ -1,0 +1,68 @@
+[
+{
+  "directory": "/home/youcef/Documents/Projects/EE/build",
+  "command": "/usr/bin/c++  -I/home/youcef/Documents/Projects/EE/include -g -std=gnu++17 -o CMakeFiles/JustCollecte.dir/main.cpp.o -c /home/youcef/Documents/Projects/EE/main.cpp",
+  "file": "/home/youcef/Documents/Projects/EE/main.cpp",
+  "output": "CMakeFiles/JustCollecte.dir/main.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/EE/build",
+  "command": "/usr/bin/c++  -I/home/youcef/Documents/Projects/EE/include -g -std=gnu++17 -o CMakeFiles/JustCollecte.dir/src/ressources/Ressource.cpp.o -c /home/youcef/Documents/Projects/EE/src/ressources/Ressource.cpp",
+  "file": "/home/youcef/Documents/Projects/EE/src/ressources/Ressource.cpp",
+  "output": "CMakeFiles/JustCollecte.dir/src/ressources/Ressource.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/EE/build",
+  "command": "/usr/bin/c++  -I/home/youcef/Documents/Projects/EE/include -g -std=gnu++17 -o CMakeFiles/JustCollecte.dir/src/ressources/Trees/Tree.cpp.o -c /home/youcef/Documents/Projects/EE/src/ressources/Trees/Tree.cpp",
+  "file": "/home/youcef/Documents/Projects/EE/src/ressources/Trees/Tree.cpp",
+  "output": "CMakeFiles/JustCollecte.dir/src/ressources/Trees/Tree.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/EE/build",
+  "command": "/usr/bin/c++  -I/home/youcef/Documents/Projects/EE/include -g -std=gnu++17 -o CMakeFiles/JustCollecte.dir/src/npc/Citizen.cpp.o -c /home/youcef/Documents/Projects/EE/src/npc/Citizen.cpp",
+  "file": "/home/youcef/Documents/Projects/EE/src/npc/Citizen.cpp",
+  "output": "CMakeFiles/JustCollecte.dir/src/npc/Citizen.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/EE/build",
+  "command": "/usr/bin/c++  -I/home/youcef/Documents/Projects/EE/include -g -std=gnu++17 -o CMakeFiles/JustCollecte.dir/src/ressources/Trees/Olk.cpp.o -c /home/youcef/Documents/Projects/EE/src/ressources/Trees/Olk.cpp",
+  "file": "/home/youcef/Documents/Projects/EE/src/ressources/Trees/Olk.cpp",
+  "output": "CMakeFiles/JustCollecte.dir/src/ressources/Trees/Olk.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/EE/build",
+  "command": "/usr/bin/c++  -I/home/youcef/Documents/Projects/EE/include -g -std=gnu++17 -o CMakeFiles/JustCollecte.dir/src/ressources/ores/Ores.cpp.o -c /home/youcef/Documents/Projects/EE/src/ressources/ores/Ores.cpp",
+  "file": "/home/youcef/Documents/Projects/EE/src/ressources/ores/Ores.cpp",
+  "output": "CMakeFiles/JustCollecte.dir/src/ressources/ores/Ores.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/EE/build",
+  "command": "/usr/bin/c++  -I/home/youcef/Documents/Projects/EE/include -g -std=gnu++17 -o CMakeFiles/JustCollecte.dir/src/ressources/Trees/Pine.cpp.o -c /home/youcef/Documents/Projects/EE/src/ressources/Trees/Pine.cpp",
+  "file": "/home/youcef/Documents/Projects/EE/src/ressources/Trees/Pine.cpp",
+  "output": "CMakeFiles/JustCollecte.dir/src/ressources/Trees/Pine.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/EE/build",
+  "command": "/usr/bin/c++  -I/home/youcef/Documents/Projects/EE/include -g -std=gnu++17 -o CMakeFiles/JustCollecte.dir/src/npc/Unit.cpp.o -c /home/youcef/Documents/Projects/EE/src/npc/Unit.cpp",
+  "file": "/home/youcef/Documents/Projects/EE/src/npc/Unit.cpp",
+  "output": "CMakeFiles/JustCollecte.dir/src/npc/Unit.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/EE/build",
+  "command": "/usr/bin/c++  -I/home/youcef/Documents/Projects/EE/include -g -std=gnu++17 -o CMakeFiles/JustCollecte.dir/src/buildings/Building.cpp.o -c /home/youcef/Documents/Projects/EE/src/buildings/Building.cpp",
+  "file": "/home/youcef/Documents/Projects/EE/src/buildings/Building.cpp",
+  "output": "CMakeFiles/JustCollecte.dir/src/buildings/Building.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/EE/build",
+  "command": "/usr/bin/c++  -I/home/youcef/Documents/Projects/EE/include -g -std=gnu++17 -o CMakeFiles/JustCollecte.dir/src/buildings/Depot.cpp.o -c /home/youcef/Documents/Projects/EE/src/buildings/Depot.cpp",
+  "file": "/home/youcef/Documents/Projects/EE/src/buildings/Depot.cpp",
+  "output": "CMakeFiles/JustCollecte.dir/src/buildings/Depot.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/EE/build",
+  "command": "/usr/bin/c++  -I/home/youcef/Documents/Projects/EE/include -g -std=gnu++17 -o CMakeFiles/JustCollecte.dir/src/buildings/Home.cpp.o -c /home/youcef/Documents/Projects/EE/src/buildings/Home.cpp",
+  "file": "/home/youcef/Documents/Projects/EE/src/buildings/Home.cpp",
+  "output": "CMakeFiles/JustCollecte.dir/src/buildings/Home.cpp.o"
+}
+]

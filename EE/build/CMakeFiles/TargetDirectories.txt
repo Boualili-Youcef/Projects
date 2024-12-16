@@ -1,0 +1,3 @@
+/home/youcef/Documents/Projects/EE/build/CMakeFiles/JustCollecte.dir
+/home/youcef/Documents/Projects/EE/build/CMakeFiles/edit_cache.dir
+/home/youcef/Documents/Projects/EE/build/CMakeFiles/rebuild_cache.dir
