@@ -13,6 +13,9 @@ struct Edge
 };
 
 // Fonction pour exécuter l'algorithme de Dijkstra
+// start : nœud de départ pour Dijkstra
+// n : nombre total de nœuds dans le graphe
+// graph : graphe représenté comme une liste d'adjacence
 vector<int> dijkstra(int start, int n, const vector<vector<Edge>> &graph)
 {
     // Initialiser un tableau pour stocker les distances minimales depuis le nœud de départ
@@ -20,17 +23,17 @@ vector<int> dijkstra(int start, int n, const vector<vector<Edge>> &graph)
     dist[start] = 0;              // La distance depuis le nœud de départ à lui-même est 0
 
     // Priority queue (file de priorité) pour explorer les nœuds dans l'ordre des distances les plus courtes
-    // La file stocke des paires (distance, nœud) c'est indiquer par le premier 
+    // La file stocke des paires (distance, nœud) c'est indiquer par le premier
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> pq; // ici on une priority_queue qui permet de sortir par defaut
                                                                           // le plus grand element mais avec greayter<> on peut sortir le plus petit element
-    pq.push({0, start}); // Ajouter le nœud de départ avec une distance initiale de 0
+    pq.push({0, start});                                                  // Ajouter le nœud de départ avec une distance initiale de 0
 
     // Tant qu'il y a des nœuds à traiter
     while (!pq.empty())
     {
         // Extraire le nœud avec la distance minimale (top de la priority queue) et destructuration avec auto [var1, var2]
         auto [currentDistance, currentNode] = pq.top();
-        // Puis pop 
+        // Puis pop
         pq.pop();
 
         // Si la distance actuelle est plus grande que celle enregistrée, on l'ignore (optimisation)
