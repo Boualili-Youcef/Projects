@@ -14,7 +14,7 @@
 
 1. Clone the repository:
    ```
-   $ git clone https://github.com/boualili/Chess-Game.git
+   $ git clone https://github.com/Boualili-Youcef/Projects/tree/main/Chess-Game-master
    ```
 
 2. Navigate to the project directory:
