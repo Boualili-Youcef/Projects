@@ -1,3 +1,0 @@
-/home/youcef/Documents/Projects/Chess-Game-master/build/CMakeFiles/ChessGame.dir
-/home/youcef/Documents/Projects/Chess-Game-master/build/CMakeFiles/edit_cache.dir
-/home/youcef/Documents/Projects/Chess-Game-master/build/CMakeFiles/rebuild_cache.dir

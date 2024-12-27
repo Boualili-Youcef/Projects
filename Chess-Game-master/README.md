@@ -22,33 +22,39 @@
    $ cd Chess-Game
    ```
 
-3. Open the `src` directory:
+3. Create a build directory:
    ```
-   $ cd src
-   ```
-
-4. Compile the program:
-   ```
-   $ g++ -o chess main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+   $ mkdir build
    ```
 
-5. Run the program:
+4. Navigate to the build directory:
    ```
-   $ ./chess
+   $ cd build
+   ```
+
+5. Run CMake to configure the project:
+   ```
+   $ cmake ..
+   ```
+
+6. Build the project:
+   ```
+   $ make
+   ```
+
+7. Run the program:
+   ```
+   $ ./ChessGame
    ```
 
 ## Project Structure
 
 - `src/`: Contains the source code files.
-- `include/`: Contains the header files.
-- `assets/`: Contains the images and other assets used in the game.
+- `build/`: Directory where the project is built.
 
 ## Dependencies
 
 - SFML (Simple and Fast Multimedia Library)
 
-## License
-
-This project is licensed under the MIT License.
 
 
