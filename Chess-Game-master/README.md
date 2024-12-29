@@ -1,8 +1,9 @@
 # Chess-Game
 
- This project is the C++ implementation of Player vs Player Chess Game in C++ using SFML graphics Library. 
+This project is the C++ implementation of Player vs Player Chess Game in C++ using SFML graphics Library. 
+Not yet complite
 
- ![Sample Image](a.png)
+ ![Sample Image](a.png) 
 
  ## Setting up SFML on Linux
 
