@@ -137,7 +137,7 @@ def main():
 
         while round_running:
             # Reduce FPS: use 10 FPS for non-training mode, keep high FPS for training if needed
-            clock.tick(5 if mode != "training" else 40)
+            clock.tick(5 if mode != "training" else 200000)
             # Incrémentation des compteurs spécifiques selon le mode
             if mode in ["human_vs_ai", "ai_vs_ai"]:
                 step_counter1 += 1
