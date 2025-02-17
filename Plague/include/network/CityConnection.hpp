@@ -4,8 +4,10 @@
 #include <iostream>
 #include <memory>
 #include <cmath>
+#include <algorithm>
 
 #include "../city/BaseCity.hpp"
+#include "../virus/BaseVirus.hpp"
 
 enum class ConnectionType
 {
@@ -29,6 +31,9 @@ public:
 
     // Methode pour calculer la probabilité de transmition d'un virus entre les deux villes
     double calculateSpreadRisk() const;
+
+    // Methode pour propager un virus entre les deux villes
+    bool propagateVirus(const std::shared_ptr<BaseVirus> &virus);
 
     ~CityConnection() = default;
 };

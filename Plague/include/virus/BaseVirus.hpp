@@ -4,11 +4,18 @@
 #include <string>
 #include <iostream>
 
-class BaseVirus {
+class BaseVirus
+{
 public:
     BaseVirus(const std::string &name, double infection_rate, double mortality_rate, double incubation_periode, double post_infection_immunity, double duration);
 
     void display() const;
+
+    double getInfectionRate() const
+    {
+        return infection_rate;
+    }
+    ~BaseVirus() = default;
 
 private:
     std::string name;

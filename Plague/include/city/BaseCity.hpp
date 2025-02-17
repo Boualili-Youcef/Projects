@@ -21,8 +21,11 @@ public:
     void update();
     void display() const;
 
-    std::string getName() const { return name; };
-    int getInfected() const { return infected; };
+    std::string getName() const { return name; }
+    int getInfected() const { return infected; }
+    int getPopulation() const { return population; }
+
+    void setInfected(int infected) { this->infected = infected; };
     ~BaseCity() = default;
 };
 
