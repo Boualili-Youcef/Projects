@@ -3,6 +3,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/plague.dir/src/city/BaseCity.cpp.o.d"
   "CMakeFiles/plague.dir/src/main.cpp.o"
   "CMakeFiles/plague.dir/src/main.cpp.o.d"
+  "CMakeFiles/plague.dir/src/network/CityConnection.cpp.o"
+  "CMakeFiles/plague.dir/src/network/CityConnection.cpp.o.d"
+  "CMakeFiles/plague.dir/src/virus/BaseVirus.cpp.o"
+  "CMakeFiles/plague.dir/src/virus/BaseVirus.cpp.o.d"
   "plague"
   "plague.pdb"
 )

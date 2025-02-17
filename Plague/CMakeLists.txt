@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Collect source files from the src directory
-file(GLOB_RECURSE SOURCE_FILES  src/main.cpp src/city/BaseCity.cpp)
+file(GLOB_RECURSE SOURCE_FILES  src/main.cpp src/city/BaseCity.cpp src/virus/BaseVirus.cpp  src/network/CityConnection.cpp)
 
 # Define the executable (adjust target name and sources as needed)
 add_executable(plague ${SOURCE_FILES})

@@ -10,5 +10,17 @@
   "command": "/usr/bin/c++   -g -std=c++17 -o CMakeFiles/plague.dir/src/main.cpp.o -c /home/youcef/Documents/Projects/Plague/src/main.cpp",
   "file": "/home/youcef/Documents/Projects/Plague/src/main.cpp",
   "output": "CMakeFiles/plague.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/Plague/build",
+  "command": "/usr/bin/c++   -g -std=c++17 -o CMakeFiles/plague.dir/src/network/CityConnection.cpp.o -c /home/youcef/Documents/Projects/Plague/src/network/CityConnection.cpp",
+  "file": "/home/youcef/Documents/Projects/Plague/src/network/CityConnection.cpp",
+  "output": "CMakeFiles/plague.dir/src/network/CityConnection.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/Plague/build",
+  "command": "/usr/bin/c++   -g -std=c++17 -o CMakeFiles/plague.dir/src/virus/BaseVirus.cpp.o -c /home/youcef/Documents/Projects/Plague/src/virus/BaseVirus.cpp",
+  "file": "/home/youcef/Documents/Projects/Plague/src/virus/BaseVirus.cpp",
+  "output": "CMakeFiles/plague.dir/src/virus/BaseVirus.cpp.o"
 }
 ]

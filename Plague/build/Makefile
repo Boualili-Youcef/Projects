@@ -177,6 +177,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/plague.dir/build.make CMakeFiles/plague.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/network/CityConnection.o: src/network/CityConnection.cpp.o
+.PHONY : src/network/CityConnection.o
+
+# target to build an object file
+src/network/CityConnection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plague.dir/build.make CMakeFiles/plague.dir/src/network/CityConnection.cpp.o
+.PHONY : src/network/CityConnection.cpp.o
+
+src/network/CityConnection.i: src/network/CityConnection.cpp.i
+.PHONY : src/network/CityConnection.i
+
+# target to preprocess a source file
+src/network/CityConnection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plague.dir/build.make CMakeFiles/plague.dir/src/network/CityConnection.cpp.i
+.PHONY : src/network/CityConnection.cpp.i
+
+src/network/CityConnection.s: src/network/CityConnection.cpp.s
+.PHONY : src/network/CityConnection.s
+
+# target to generate assembly for a file
+src/network/CityConnection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plague.dir/build.make CMakeFiles/plague.dir/src/network/CityConnection.cpp.s
+.PHONY : src/network/CityConnection.cpp.s
+
+src/virus/BaseVirus.o: src/virus/BaseVirus.cpp.o
+.PHONY : src/virus/BaseVirus.o
+
+# target to build an object file
+src/virus/BaseVirus.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plague.dir/build.make CMakeFiles/plague.dir/src/virus/BaseVirus.cpp.o
+.PHONY : src/virus/BaseVirus.cpp.o
+
+src/virus/BaseVirus.i: src/virus/BaseVirus.cpp.i
+.PHONY : src/virus/BaseVirus.i
+
+# target to preprocess a source file
+src/virus/BaseVirus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plague.dir/build.make CMakeFiles/plague.dir/src/virus/BaseVirus.cpp.i
+.PHONY : src/virus/BaseVirus.cpp.i
+
+src/virus/BaseVirus.s: src/virus/BaseVirus.cpp.s
+.PHONY : src/virus/BaseVirus.s
+
+# target to generate assembly for a file
+src/virus/BaseVirus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plague.dir/build.make CMakeFiles/plague.dir/src/virus/BaseVirus.cpp.s
+.PHONY : src/virus/BaseVirus.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +240,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/network/CityConnection.o"
+	@echo "... src/network/CityConnection.i"
+	@echo "... src/network/CityConnection.s"
+	@echo "... src/virus/BaseVirus.o"
+	@echo "... src/virus/BaseVirus.i"
+	@echo "... src/virus/BaseVirus.s"
 .PHONY : help
 
 

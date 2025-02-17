@@ -1,0 +1,29 @@
+📜 Cahier des Charges : Classe CityConnection
+🟢 1. Rôle de la classe CityConnection
+La classe CityConnection représente une liaison entre deux villes dans le réseau.
+Elle influence la propagation du virus en fonction de divers paramètres (trafic, distance, type de transport).
+
+🟠 2. Responsabilités
+✅ Relier deux villes du réseau
+✅ Définir un facteur de propagation basé sur différents critères
+✅ Permettre la propagation d’un virus entre les villes connectées
+
+📌 3. Attributs
+Attribut	Type	Description
+cityA	std::shared_ptr<BaseCity>	Pointeur vers la première ville
+cityB	std::shared_ptr<BaseCity>	Pointeur vers la deuxième ville
+connectionType	ConnectionType	Type de connexion (Route, Train, Avion)
+traffic	double	Niveau de trafic entre les deux villes (ex: 0.1 = peu, 1.0 = fort)
+distance	double	Distance entre les deux villes (km)
+spreadFactor	double	Facteur influençant la propagation du virus
+🔹 ConnectionType peut être une enum :
+
+enum class ConnectionType { ROAD, TRAIN, FLIGHT };
+⚙️ 4. Méthodes
+Méthode	Retour	Description
+getOtherCity(BaseCity* city)	std::shared_ptr<BaseCity>	Retourne l’autre ville de la connexion
+calculateSpreadRisk()	double	Calcule la probabilité de transmission
+propagateVirus(BaseVirus& virus)	void	Fait passer un virus d’une ville à l’autre
+
+
+

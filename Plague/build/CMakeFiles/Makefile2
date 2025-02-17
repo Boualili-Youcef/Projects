@@ -81,12 +81,12 @@ clean: CMakeFiles/plague.dir/clean
 CMakeFiles/plague.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/plague.dir/build.make CMakeFiles/plague.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/plague.dir/build.make CMakeFiles/plague.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/youcef/Documents/Projects/Plague/build/CMakeFiles --progress-num=1,2,3 "Built target plague"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/youcef/Documents/Projects/Plague/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target plague"
 .PHONY : CMakeFiles/plague.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/plague.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/youcef/Documents/Projects/Plague/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/youcef/Documents/Projects/Plague/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/plague.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/youcef/Documents/Projects/Plague/build/CMakeFiles 0
 .PHONY : CMakeFiles/plague.dir/rule

@@ -1,0 +1,18 @@
+📄 Cahier des Charges - Module Network
+1️⃣ Objectif
+Créer un réseau de villes connectées où une maladie peut se propager.
+Ce réseau simulera les déplacements entre villes et influencera la propagation du virus.
+
+2️⃣ Spécifications Fonctionnelles
+🏙 Caractéristiques du Réseau de Villes
+Le réseau de villes doit permettre de :
+
+Gérer un ensemble de villes connectées
+Simuler les flux de population entre villes (déplacements de personnes)
+Propager la maladie entre villes via les connexions
+Modéliser différents types de liens entre villes (route, train, avion)
+3️⃣ Spécifications Techniques
+📂 Structure Générale
+Classe Network : gère l’ensemble des villes et leurs connexions.
+Classe CityConnection : représente un lien entre deux villes.
+Classe BaseCity (existe déjà) : représente une ville et interagit avec Network.

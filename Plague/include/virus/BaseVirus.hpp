@@ -1,24 +1,22 @@
-#ifndef CITY_HPP
-#define CITY_HPP
+#ifndef BASEVIRUS_HPP
+#define BASEVIRUS_HPP
 
+#include <string>
 #include <iostream>
 
-class BaseVirus
-{
+class BaseVirus {
+public:
+    BaseVirus(const std::string &name, double infection_rate, double mortality_rate, double incubation_periode, double post_infection_immunity, double duration);
+
+    void display() const;
+
 private:
     std::string name;
     double infection_rate;
     double mortality_rate;
     double incubation_periode;
-    
-
-public:
-    BaseVirus(const std::string &name, double infection_rate, double mortality_rate);
-
-    void display() const;
-
-    std::string getName() const { return name; };
-    ~BaseVirus() = default;
+    double post_infection_immunity;
+    double duration;
 };
 
-#endif // CITY_HPP
+#endif // BASEVIRUS_HPP

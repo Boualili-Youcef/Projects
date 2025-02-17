@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/youcef/Documents/Projects/Plague/src/city/BaseCity.cpp" "CMakeFiles/plague.dir/src/city/BaseCity.cpp.o" "gcc" "CMakeFiles/plague.dir/src/city/BaseCity.cpp.o.d"
   "/home/youcef/Documents/Projects/Plague/src/main.cpp" "CMakeFiles/plague.dir/src/main.cpp.o" "gcc" "CMakeFiles/plague.dir/src/main.cpp.o.d"
+  "/home/youcef/Documents/Projects/Plague/src/network/CityConnection.cpp" "CMakeFiles/plague.dir/src/network/CityConnection.cpp.o" "gcc" "CMakeFiles/plague.dir/src/network/CityConnection.cpp.o.d"
+  "/home/youcef/Documents/Projects/Plague/src/virus/BaseVirus.cpp" "CMakeFiles/plague.dir/src/virus/BaseVirus.cpp.o" "gcc" "CMakeFiles/plague.dir/src/virus/BaseVirus.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

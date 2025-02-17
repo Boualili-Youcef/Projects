@@ -1,0 +1,20 @@
+📄 Cahier des Charges - Classe Virus
+1️⃣ Objectif
+Créer une classe Virus permettant de modéliser différents types de virus 
+avec leurs propres caractéristiques et comportements pour influencer la 
+propagation de l’épidémie dans le réseau de villes.
+
+2️⃣ Spécifications Fonctionnelles
+🎯 Caractéristiques Générales du Virus
+Chaque virus doit avoir :
+
+Un nom (COVID-19, Ebola, Grippe, etc.)
+Un taux de transmission (% de personnes contaminées par un infecté)
+Un taux de mortalité (% de décès parmi les infectés)
+Une période d’incubation (temps avant que les symptômes apparaissent)
+Un taux d’immunité post-infection (proportion de personnes devenant immunisées après infection)
+Une durée d’infection (combien de jours une personne reste infectieuse)
+🔄 Comportements du Virus
+Propagation : Affecte les villes en fonction de leur type.
+Mutation (optionnel) : Possibilité de modifier les caractéristiques après plusieurs cycles.
+Interaction avec les mesures sanitaires (ex : confinement, vaccination, soins médicaux dans les villes industrielles, etc.)

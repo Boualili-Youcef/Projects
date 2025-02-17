@@ -223,15 +223,6 @@ Plague_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Plague_SOURCE_DIR:STATIC=/home/youcef/Documents/Projects/Plague
 
-//Value Computed by CMake
-Project_BINARY_DIR:STATIC=/home/youcef/Documents/Projects/Plague/build
-
-//Value Computed by CMake
-Project_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/home/youcef/Documents/Projects/Plague
-
 
 ########################
 # INTERNAL cache entries
