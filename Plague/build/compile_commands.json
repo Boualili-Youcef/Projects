@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/youcef/Documents/Projects/Plague/build",
+  "command": "/usr/bin/c++   -g -std=c++17 -o CMakeFiles/plague.dir/src/city/BaseCity.cpp.o -c /home/youcef/Documents/Projects/Plague/src/city/BaseCity.cpp",
+  "file": "/home/youcef/Documents/Projects/Plague/src/city/BaseCity.cpp",
+  "output": "CMakeFiles/plague.dir/src/city/BaseCity.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/Plague/build",
+  "command": "/usr/bin/c++   -g -std=c++17 -o CMakeFiles/plague.dir/src/main.cpp.o -c /home/youcef/Documents/Projects/Plague/src/main.cpp",
+  "file": "/home/youcef/Documents/Projects/Plague/src/main.cpp",
+  "output": "CMakeFiles/plague.dir/src/main.cpp.o"
+}
+]

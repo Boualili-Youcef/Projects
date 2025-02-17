@@ -1,0 +1,3 @@
+/home/youcef/Documents/Projects/Plague/build/CMakeFiles/plague.dir
+/home/youcef/Documents/Projects/Plague/build/CMakeFiles/edit_cache.dir
+/home/youcef/Documents/Projects/Plague/build/CMakeFiles/rebuild_cache.dir

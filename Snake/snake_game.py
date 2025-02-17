@@ -2,6 +2,7 @@ import sys, random, pygame
 from agent import RLAgent
 from config import WIDTH, HEIGHT, BLOCK_SIZE  # import des constantes depuis config.py
 import matplotlib.pyplot as plt
+import threading
 
 # Couleurs
 BLACK = (0, 0, 0)
@@ -136,8 +137,7 @@ def main():
             }
 
         while round_running:
-            # Reduce FPS: use 10 FPS for non-training mode, keep high FPS for training if needed
-            clock.tick(5 if mode != "training" else 200000)
+            clock.tick(5 if mode != "training" else 40)
             # Incrémentation des compteurs spécifiques selon le mode
             if mode in ["human_vs_ai", "ai_vs_ai"]:
                 step_counter1 += 1
@@ -198,9 +198,9 @@ def main():
                 reward1 = -10
                 if mode in ["ai", "training", "human_vs_ai", "ai_vs_ai"]:
                     if mode in ["ai", "training", "human_vs_ai"]:
-                        agent1.learn(prev_state1, action if mode!="human" else None, reward1, None, True)
+                        threading.Thread(target=agent1.learn, args=(prev_state1, action if mode!="human" else None, reward1, None, True)).start()
                     elif mode == "ai_vs_ai":
-                        agent1.learn(prev_state1, action1, reward1, None, True)
+                        threading.Thread(target=agent1.learn, args=(prev_state1, action1, reward1, None, True)).start()
                 round_running = False  # fin du round en cas de mort
                 # Aucun délai ni attente : le round se relance directement
                 continue
@@ -221,9 +221,9 @@ def main():
             }
             # Apprentissage pour snake1 si IA ou entraînement
             if mode in ["ai", "training"]:
-                agent1.learn(prev_state1, action, reward1, state1, False)
+                threading.Thread(target=agent1.learn, args=(prev_state1, action, reward1, state1, False)).start()
             elif mode == "ai_vs_ai":
-                agent1.learn(prev_state1, action1, reward1, state1, False)
+                threading.Thread(target=agent1.learn, args=(prev_state1, action1, reward1, state1, False)).start()
             
             # Pour modes à deux serpents, on traite snake2 également
             if mode in ["human_vs_ai", "ai_vs_ai"]:
@@ -242,9 +242,9 @@ def main():
                 if head2[0] < 0 or head2[0] >= WIDTH or head2[1] < 0 or head2[1] >= HEIGHT or head2 in snake2.body[1:]:
                     reward2 = -10
                     if mode == "human_vs_ai":
-                        agent1.learn(prev_state2, action, reward2, None, True)
+                        threading.Thread(target=agent1.learn, args=(prev_state2, action, reward2, None, True)).start()
                     elif mode == "ai_vs_ai":
-                        agent2.learn(prev_state2, action2, reward2, None, True)
+                        threading.Thread(target=agent2.learn, args=(prev_state2, action2, reward2, None, True)).start()
                     round_running = False
                     continue
                 state2 = {
@@ -254,7 +254,7 @@ def main():
                     'body': snake2.body[1:]
                 }
                 if mode == "ai_vs_ai":
-                    agent2.learn(prev_state2, action2, reward2, state2, False)
+                    threading.Thread(target=agent2.learn, args=(prev_state2, action2, reward2, state2, False)).start()
             
             # Affichage pour tous les modes, y compris "training"
             win.fill(BLACK)
@@ -275,9 +275,9 @@ def main():
         rounds.append(round_number)
         scores.append(score1)
         ax.clear()
-        ax.plot(rounds, scores, label="Score")
-        ax.legend()
-        plt.pause(0.001)
+        #ax.plot(rounds, scores, label="Score")
+        #ax.legend()
+        #plt.pause(0.001)
         if score1 >=  perf_threshold and achieved_threshold is False:
             achieved_threshold = True
             print("Seuil de performance atteint !")

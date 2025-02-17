@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/plague.dir/src/city/BaseCity.cpp.o CMakeFiles/plague.dir/src/main.cpp.o -o plague 
