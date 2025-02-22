@@ -1,8 +1,12 @@
 #pragma once
 
+#include <iostream>
 #include "Unit.hpp"
 #include "../ressources/Ressource.hpp"
 #include "../buildings/Depot.hpp"
+
+class Ressource; // Forward declaration
+class Depot;     // Forward declaration
 
 class Citizen : public Unit {
 private:
@@ -21,6 +25,8 @@ public:
     void gatherResources(Ressource &ressource, Depot &depot);
     void takeResourcesToDepot(Depot &depot);
     void setTargetPosition(int x, int y);
+    // New method to move gradually toward a resource.
+    void moveTowards(Ressource &ressource);
 
     int getGatheringSpeed() const;
     int getCarryingCapacity() const;

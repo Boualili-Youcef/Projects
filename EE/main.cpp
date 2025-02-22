@@ -9,14 +9,11 @@
 #include "../include/buildings/Depot.hpp"
 #include "../include/ressources/Ressource.hpp"
 
-void moveAndGather(std::shared_ptr<Citizen> citizen, std::shared_ptr<Ressource> resource, sf::RectangleShape &citizenShape, Depot &depot)
-{
-    citizen->gatherResources(*resource, depot);
-}
+// Remove or comment out the moveAndGather function and thread-related code.
 
 int main()
 {
-    cout << "Hello, World!" << endl;
+    std::cout << "Hello, World!" << std::endl;
     // Create a window
     sf::RenderWindow window(sf::VideoMode(1200, 800), "Citizen Gathering Resources");
 
@@ -60,12 +57,7 @@ int main()
     depotShape.setFillColor(sf::Color::Red);
     depotShape.setPosition(depot.getPositionX(), depot.getPositionY());
 
-    // Create threads for each Citizen
-    std::vector<std::thread> threads;
-    for (size_t i = 0; i < citizens.size(); ++i)
-    {
-        threads.emplace_back(moveAndGather, citizens[i], resource, std::ref(citizenShapes[i]), std::ref(depot));
-    }
+    // Remove thread creation and joining code
 
     // Main loop
     while (window.isOpen())
@@ -75,6 +67,12 @@ int main()
         {
             if (event.type == sf::Event::Closed)
                 window.close();
+        }
+
+        // Update each citizen's position towards the resource
+        for (auto &citizen : citizens)
+        {
+            citizen->moveTowards(*resource); // Ensure Citizen has a method moveTowards()
         }
 
         // Clear the window
@@ -100,11 +98,7 @@ int main()
         sf::sleep(sf::milliseconds(100));
     }
 
-    // Join threads
-    for (auto &thread : threads)
-    {
-        thread.join();
-    }
+    // Optionally, additional logic for resource gathering can be added here.
 
     std::cout << "Gold: " << depot.getResource(ResourceType::Gold) << std::endl;
     std::cout << "Iron: " << depot.getResource(ResourceType::Iron) << std::endl;

@@ -1,7 +1,16 @@
+#include <iostream>
+#include <string>
+#include <thread>
+#include <cmath>
 #include "../include/npc/Citizen.hpp"
 
 Citizen::Citizen(std::string name, int positionX, int positionY, int health, int attack, int speed, int gatheringSpeed, int carryingCapacity)
-    : Unit(name, positionX, positionY, health, attack, speed), gatheringSpeed(gatheringSpeed), carryingCapacity(carryingCapacity), collectedRessources(0), movingToDepot(false), movingToResource(true)
+    : Unit(name, positionX, positionY, health, attack, speed),
+      gatheringSpeed(gatheringSpeed),
+      carryingCapacity(carryingCapacity),
+      collectedRessources(0),
+      movingToDepot(false),
+      movingToResource(true)
 {
 }
 
@@ -23,8 +32,8 @@ void Citizen::gatherResources(Ressource &ressource, Depot &depot)
 
         if (getPositionX() == resourceX && getPositionY() == resourceY)
         {
-            std::cout << getName() << " is gathering resources at speed " << gatheringSpeed << " and has a carrying capacity of " << carryingCapacity << " units." << std::endl;
-
+            std::cout << getName() << " is gathering resources at speed " << gatheringSpeed
+                      << " and has a carrying capacity of " << carryingCapacity << " units." << std::endl;
             while (ressource.getQuantity() > 0 && carryingCapacity > collectedRessources)
             {
                 std::cout << getName() << " is waiting for " << gatheringSpeed << " seconds before gathering." << std::endl;
@@ -39,7 +48,8 @@ void Citizen::gatherResources(Ressource &ressource, Depot &depot)
                 ressource.setQuantity(ressource.getQuantity() - toCollect);
                 collectedRessources += toCollect;
 
-                std::cout << getName() << " has gathered " << toCollect << " units. Remaining resources: " << ressource.getQuantity() << "." << std::endl;
+                std::cout << getName() << " has gathered " << toCollect << " units. Remaining resources: "
+                          << ressource.getQuantity() << "." << std::endl;
 
                 if (collectedRessources >= carryingCapacity)
                 {
@@ -64,6 +74,13 @@ void Citizen::gatherResources(Ressource &ressource, Depot &depot)
 
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
+}
+
+void Citizen::moveTowards(Ressource &ressource)
+{
+    int targetX = ressource.getPositionX();
+    int targetY = ressource.getPositionY();
+    setTargetPosition(targetX, targetY);
 }
 
 void Citizen::takeResourcesToDepot(Depot &depot)
@@ -93,7 +110,8 @@ void Citizen::setTargetPosition(int x, int y)
         setPosition(getPositionX() + static_cast<int>(moveX), getPositionY() + static_cast<int>(moveY));
     }
 
-    std::cout << getName() << " is moving to (" << x << ", " << y << "). Current position: (" << getPositionX() << ", " << getPositionY() << ")." << std::endl;
+    std::cout << getName() << " is moving to (" << x << ", " << y << "). Current position: ("
+              << getPositionX() << ", " << getPositionY() << ")." << std::endl;
 }
 
 int Citizen::getGatheringSpeed() const { return gatheringSpeed; }
