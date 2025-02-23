@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/JustCollecte.dir/src/buildings/Depot.cpp.o.d"
   "CMakeFiles/JustCollecte.dir/src/buildings/Home.cpp.o"
   "CMakeFiles/JustCollecte.dir/src/buildings/Home.cpp.o.d"
+  "CMakeFiles/JustCollecte.dir/src/game/Game.cpp.o"
+  "CMakeFiles/JustCollecte.dir/src/game/Game.cpp.o.d"
   "CMakeFiles/JustCollecte.dir/src/npc/Citizen.cpp.o"
   "CMakeFiles/JustCollecte.dir/src/npc/Citizen.cpp.o.d"
   "CMakeFiles/JustCollecte.dir/src/npc/Unit.cpp.o"

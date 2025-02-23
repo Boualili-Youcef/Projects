@@ -33,21 +33,17 @@ void Unit::update(float deltaTime)
 {
     if (moving)
     {
-        float moveX = direction.x * speed * deltaTime;
-        float moveY = direction.y * speed * deltaTime;
+        float distanceRemaining = std::sqrt(std::pow(target.x - position.x, 2) + std::pow(target.y - position.y, 2));
+        float step = speed * deltaTime;
+        // Clamp step so as not to overshoot
+        if (step > distanceRemaining)
+            step = distanceRemaining;
+        
+        position.x += direction.x * step;
+        position.y += direction.y * step;
 
-        // Vérifier si l'unité atteint la cible
-        if (std::abs(target.x - position.x) <= std::abs(moveX) &&
-            std::abs(target.y - position.y) <= std::abs(moveY))
-        {
-            position.x = target.x;
-            position.y = target.y;
+        // Stop moving if we've virtually reached the target
+        if (distanceRemaining <= 0.001f)
             moving = false;
-        }
-        else
-        {
-            position.x += moveX;
-            position.y += moveY;
-        }
     }
 }

@@ -8,7 +8,8 @@ enum class ResourceType
     Gold,
     Iron,
     Food,
-    Wood
+    Wood,
+    None
 };
 
 class Ressource

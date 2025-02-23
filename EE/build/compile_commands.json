@@ -64,5 +64,11 @@
   "command": "/usr/bin/c++  -I/home/youcef/Documents/Projects/EE/include -g -std=gnu++17 -o CMakeFiles/JustCollecte.dir/src/buildings/Home.cpp.o -c /home/youcef/Documents/Projects/EE/src/buildings/Home.cpp",
   "file": "/home/youcef/Documents/Projects/EE/src/buildings/Home.cpp",
   "output": "CMakeFiles/JustCollecte.dir/src/buildings/Home.cpp.o"
+},
+{
+  "directory": "/home/youcef/Documents/Projects/EE/build",
+  "command": "/usr/bin/c++  -I/home/youcef/Documents/Projects/EE/include -g -std=gnu++17 -o CMakeFiles/JustCollecte.dir/src/game/Game.cpp.o -c /home/youcef/Documents/Projects/EE/src/game/Game.cpp",
+  "file": "/home/youcef/Documents/Projects/EE/src/game/Game.cpp",
+  "output": "CMakeFiles/JustCollecte.dir/src/game/Game.cpp.o"
 }
 ]

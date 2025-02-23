@@ -225,6 +225,30 @@ src/buildings/Home.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/JustCollecte.dir/build.make CMakeFiles/JustCollecte.dir/src/buildings/Home.cpp.s
 .PHONY : src/buildings/Home.cpp.s
 
+src/game/Game.o: src/game/Game.cpp.o
+.PHONY : src/game/Game.o
+
+# target to build an object file
+src/game/Game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JustCollecte.dir/build.make CMakeFiles/JustCollecte.dir/src/game/Game.cpp.o
+.PHONY : src/game/Game.cpp.o
+
+src/game/Game.i: src/game/Game.cpp.i
+.PHONY : src/game/Game.i
+
+# target to preprocess a source file
+src/game/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JustCollecte.dir/build.make CMakeFiles/JustCollecte.dir/src/game/Game.cpp.i
+.PHONY : src/game/Game.cpp.i
+
+src/game/Game.s: src/game/Game.cpp.s
+.PHONY : src/game/Game.s
+
+# target to generate assembly for a file
+src/game/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JustCollecte.dir/build.make CMakeFiles/JustCollecte.dir/src/game/Game.cpp.s
+.PHONY : src/game/Game.cpp.s
+
 src/npc/Citizen.o: src/npc/Citizen.cpp.o
 .PHONY : src/npc/Citizen.o
 
@@ -414,6 +438,9 @@ help:
 	@echo "... src/buildings/Home.o"
 	@echo "... src/buildings/Home.i"
 	@echo "... src/buildings/Home.s"
+	@echo "... src/game/Game.o"
+	@echo "... src/game/Game.i"
+	@echo "... src/game/Game.s"
 	@echo "... src/npc/Citizen.o"
 	@echo "... src/npc/Citizen.i"
 	@echo "... src/npc/Citizen.s"

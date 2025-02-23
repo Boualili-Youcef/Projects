@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/youcef/Documents/Projects/EE/src/buildings/Building.cpp" "CMakeFiles/JustCollecte.dir/src/buildings/Building.cpp.o" "gcc" "CMakeFiles/JustCollecte.dir/src/buildings/Building.cpp.o.d"
   "/home/youcef/Documents/Projects/EE/src/buildings/Depot.cpp" "CMakeFiles/JustCollecte.dir/src/buildings/Depot.cpp.o" "gcc" "CMakeFiles/JustCollecte.dir/src/buildings/Depot.cpp.o.d"
   "/home/youcef/Documents/Projects/EE/src/buildings/Home.cpp" "CMakeFiles/JustCollecte.dir/src/buildings/Home.cpp.o" "gcc" "CMakeFiles/JustCollecte.dir/src/buildings/Home.cpp.o.d"
+  "/home/youcef/Documents/Projects/EE/src/game/Game.cpp" "CMakeFiles/JustCollecte.dir/src/game/Game.cpp.o" "gcc" "CMakeFiles/JustCollecte.dir/src/game/Game.cpp.o.d"
   "/home/youcef/Documents/Projects/EE/src/npc/Citizen.cpp" "CMakeFiles/JustCollecte.dir/src/npc/Citizen.cpp.o" "gcc" "CMakeFiles/JustCollecte.dir/src/npc/Citizen.cpp.o.d"
   "/home/youcef/Documents/Projects/EE/src/npc/Unit.cpp" "CMakeFiles/JustCollecte.dir/src/npc/Unit.cpp.o" "gcc" "CMakeFiles/JustCollecte.dir/src/npc/Unit.cpp.o.d"
   "/home/youcef/Documents/Projects/EE/src/ressources/Ressource.cpp" "CMakeFiles/JustCollecte.dir/src/ressources/Ressource.cpp.o" "gcc" "CMakeFiles/JustCollecte.dir/src/ressources/Ressource.cpp.o.d"

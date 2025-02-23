@@ -1,5 +1,6 @@
 CMakeFiles/JustCollecte.dir/main.cpp.o: \
  /home/youcef/Documents/Projects/EE/main.cpp /usr/include/stdc-predef.h \
+ /home/youcef/Documents/Projects/EE/include/../include/game/Game.hpp \
  /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \
  /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
  /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
@@ -233,8 +234,22 @@ CMakeFiles/JustCollecte.dir/main.cpp.o: \
  /usr/include/SFML/Graphics/Glsl.hpp /usr/include/SFML/Graphics/Glsl.inl \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
- /usr/include/SFML/Graphics/VertexBuffer.hpp /usr/include/c++/13/iostream \
- /usr/include/c++/13/istream /usr/include/c++/13/bits/istream.tcc \
+ /usr/include/SFML/Graphics/VertexBuffer.hpp /usr/include/c++/13/memory \
+ /usr/include/c++/13/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
+ /usr/include/c++/13/bits/shared_ptr.h \
+ /usr/include/c++/13/bits/shared_ptr_base.h \
+ /usr/include/c++/13/bits/allocated_ptr.h \
+ /usr/include/c++/13/ext/concurrence.h \
+ /usr/include/c++/13/bits/shared_ptr_atomic.h \
+ /usr/include/c++/13/bits/atomic_base.h \
+ /usr/include/c++/13/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/13/backward/auto_ptr.h \
+ /usr/include/c++/13/pstl/glue_memory_defs.h \
+ /home/youcef/Documents/Projects/EE/include/../include/game/../npc/Citizen.hpp \
+ /usr/include/c++/13/iostream /usr/include/c++/13/istream \
+ /usr/include/c++/13/bits/istream.tcc \
+ /home/youcef/Documents/Projects/EE/include/../include/game/../npc/Unit.hpp \
  /usr/include/c++/13/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -257,21 +272,17 @@ CMakeFiles/JustCollecte.dir/main.cpp.o: \
  /usr/include/c++/13/tr1/modified_bessel_func.tcc \
  /usr/include/c++/13/tr1/poly_hermite.tcc \
  /usr/include/c++/13/tr1/poly_laguerre.tcc \
- /usr/include/c++/13/tr1/riemann_zeta.tcc \
- /home/youcef/Documents/Projects/EE/include/../include/npc/Unit.hpp \
- /usr/include/c++/13/chrono /usr/include/c++/13/bits/chrono.h \
- /usr/include/c++/13/ratio /usr/include/c++/13/cstdint \
- /usr/include/c++/13/bits/parse_numbers.h /usr/include/c++/13/thread \
- /usr/include/c++/13/bits/std_thread.h \
- /usr/include/c++/13/bits/unique_ptr.h \
+ /usr/include/c++/13/tr1/riemann_zeta.tcc /usr/include/c++/13/chrono \
+ /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
+ /usr/include/c++/13/cstdint /usr/include/c++/13/bits/parse_numbers.h \
+ /usr/include/c++/13/thread /usr/include/c++/13/bits/std_thread.h \
  /usr/include/c++/13/bits/this_thread_sleep.h \
- /home/youcef/Documents/Projects/EE/include/../include/npc/../Position.hpp \
- /home/youcef/Documents/Projects/EE/include/../include/ressources/Trees/Pine.hpp \
- /home/youcef/Documents/Projects/EE/include/../include/ressources/Trees/Tree.hpp \
- /home/youcef/Documents/Projects/EE/include/../include/ressources/Trees/../Ressource.hpp \
- /home/youcef/Documents/Projects/EE/include/../include/ressources/Trees/../../Position.hpp \
- /home/youcef/Documents/Projects/EE/include/../include/ressources/Trees/../../Position.hpp \
- /home/youcef/Documents/Projects/EE/include/../include/npc/Citizen.hpp \
- /home/youcef/Documents/Projects/EE/include/../include/npc/../buildings/Depot.hpp \
- /home/youcef/Documents/Projects/EE/include/../include/npc/../buildings/Building.hpp \
- /home/youcef/Documents/Projects/EE/include/../include/npc/../buildings/../Position.hpp
+ /home/youcef/Documents/Projects/EE/include/../include/game/../npc/../Position.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/game/../npc/../ressources/Ressource.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/game/../npc/../ressources/../Position.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/game/../npc/../buildings/Depot.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/game/../npc/../buildings/Building.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/game/../npc/../buildings/../Position.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/game/../ressources/Trees/Pine.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/game/../ressources/Trees/Tree.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/game/../ressources/Trees/../../Position.hpp

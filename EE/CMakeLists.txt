@@ -24,6 +24,8 @@ set(SOURCE_FILES
     src/buildings/Building.cpp
     src/buildings/Depot.cpp
     src/buildings/Home.cpp
+    src/game/Game.cpp
+
 )
 
 # Ajouter l'exécutable du projet (fichier source principal)
