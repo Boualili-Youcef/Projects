@@ -2,17 +2,19 @@
 
 #include "Building.hpp"
 #include "../ressources/Ressource.hpp"
+#include "../Position.hpp"
 #include <map>
+
 class Depot : public Building
 {
 private:
     int capacity;
-    map<ResourceType, int> resources;
+    std::map<ResourceType, int> resources;
 
 public:
-    Depot(string name, int health, int positionX, int positionY, int capacity);
+    Depot(const std::string &name, int health, const Position &position, int capacity);
 
-    // Getter pour la vitesse de collecte et la capacité de transport
+    // Getter pour la capacité
     int getCapacity() const;
     int getResource(ResourceType type) const;
 

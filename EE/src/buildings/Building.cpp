@@ -1,7 +1,7 @@
 #include "../include/buildings/Building.hpp"
 
-Building::Building(string name, int health, int positionX, int positionY)
-    : name(name), health(health), positionX(positionX), positionY(positionY)
+Building::Building(const std::string &name, int health, const Position &position)
+    : name(name), health(health), position(position)
 {
 }
 
@@ -10,18 +10,12 @@ int Building::getHealth() const
     return health;
 }
 
-string Building::getName() const
+std::string Building::getName() const
 {
     return name;
 }
 
-
-int Building::getPositionX() const
+Position Building::getPosition() const
 {
-    return positionX;
-}
-
-int Building::getPositionY() const
-{
-    return positionY;
+    return position;
 }

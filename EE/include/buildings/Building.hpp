@@ -1,22 +1,20 @@
 #pragma once
 
 #include <iostream>
-
-using namespace std;
+#include "../Position.hpp"
 
 class Building
 {
 private:
-    string name; 
+    std::string name; 
     int health;
-    int positionX, positionY;
+    Position position;
 
 public:
-    Building(string name,int health, int positionX, int positionY);
+    Building(const std::string& name,int health, const Position& position);
 
     // Getter pour la vitesse de collecte et la capacité de transport
     int getHealth() const;
-    string getName() const;
-    int getPositionX() const;
-    int getPositionY() const;
+    std::string getName() const;
+    Position getPosition() const;
 };

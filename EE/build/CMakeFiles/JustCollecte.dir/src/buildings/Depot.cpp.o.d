@@ -152,7 +152,9 @@ CMakeFiles/JustCollecte.dir/src/buildings/Depot.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
+ /home/youcef/Documents/Projects/EE/include/../include/buildings/../Position.hpp \
  /home/youcef/Documents/Projects/EE/include/../include/buildings/../ressources/Ressource.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/buildings/../ressources/../Position.hpp \
  /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
  /usr/include/c++/13/ext/aligned_buffer.h \
  /usr/include/c++/13/bits/node_handle.h \

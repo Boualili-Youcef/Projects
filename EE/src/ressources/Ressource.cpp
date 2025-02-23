@@ -1,11 +1,11 @@
 #include "../include/ressources/Ressource.hpp"
 
-Ressource::Ressource(string name, int quantity, double time_to_gather, int positionX, int positionY, ResourceType type)
-    : name(name), quantity(quantity), time_to_gather(time_to_gather), positionX(positionX), positionY(positionY), type(type)
+Ressource::Ressource(const std::string &name, int quantity, double time_to_gather, const Position &position, ResourceType type)
+    : name(name), quantity(quantity), time_to_gather(time_to_gather), position(position), type(type)
 {
 }
 
-const string &Ressource::getName() const
+const std::string &Ressource::getName() const
 {
     return name;
 }
@@ -20,13 +20,9 @@ double Ressource::getTimeToGather() const
     return time_to_gather;
 }
 
-int Ressource::getPositionX() const
+Position Ressource::getPosition() const
 {
-    return positionX;
-}
-int Ressource::getPositionY() const
-{
-    return positionY;
+    return position;
 }
 
 ResourceType Ressource::getType() const
@@ -42,6 +38,23 @@ void Ressource::setQuantity(int quantity)
     }
     else
     {
-        cout << "Quantity cannot be negative!" << endl;
+        std::cout << "Quantity cannot be negative!" << std::endl;
+    }
+}
+
+std::string Ressource::printTypeResource() const
+{
+    switch (type)
+    {
+    case ResourceType::Gold:
+        return "Gold";
+    case ResourceType::Iron:
+        return "Iron";
+    case ResourceType::Food:
+        return "Food";
+    case ResourceType::Wood:
+        return "Wood";
+    default:
+        return "Unknown";
     }
 }

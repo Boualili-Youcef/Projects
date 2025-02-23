@@ -2,120 +2,68 @@
 #include <string>
 #include <thread>
 #include <cmath>
+#include <algorithm> // Pour std::min
+#include <chrono>
+#include <thread>
 #include "../include/npc/Citizen.hpp"
 
-Citizen::Citizen(std::string name, float positionX, float positionY, int health, int attack, int speed, int gatheringSpeed, int carryingCapacity)
-    : Unit(name, positionX, positionY, health, attack, speed),
+Citizen::Citizen(const std::string &name, const Position &position, int health, int attack, int speed,
+                 const Position &target, const Position &direction, bool moving,
+                 int gatheringSpeed, int carryingCapacity)
+    : Unit(name, position, health, attack, speed, target, direction, moving),
       gatheringSpeed(gatheringSpeed),
       carryingCapacity(carryingCapacity),
-      collectedRessources(0),
-      movingToDepot(false),
-      movingToResource(true)
+      collectedRessources(0)
 {
 }
 
-void Citizen::gatherResources(Ressource &ressource, Depot &depot)
+void Citizen::update(float deltaTime, Ressource &ressource, Depot &depot)
 {
-    resourceX = ressource.getPositionX();
-    resourceY = ressource.getPositionY();
-    depotX = depot.getPositionX();
-    depotY = depot.getPositionY();
-    carriedResourceType = ressource.getType();
-
-    while (true)
+    // Auto move vers la ressource si le citoyen est inactif et n'a rien récolté
+    float epsilon = 0.01f;
+    Position currPos = getPosition();
+    Position resourcePos = ressource.getPosition();
+    if (!getMoving() && collectedRessources == 0 && ressource.getQuantity() > 0)
     {
-        if (movingToResource)
+        if (std::abs(currPos.x - resourcePos.x) > epsilon || std::abs(currPos.y - resourcePos.y) > epsilon)
         {
-            setTargetPosition(resourceX, resourceY);
-            movingToResource = false;
+            move(resourcePos);
+            return; // Attendre le prochain update pour que le mouvement démarre
         }
-
-        if (getPositionX() == resourceX && getPositionY() == resourceY)
+    }
+    
+    Unit::update(deltaTime);
+    
+    // ...existing gathering/depot code...
+    if(!getMoving())
+    {
+        // Arrivé à la ressource ?
+        if (std::abs(currPos.x - resourcePos.x) < epsilon &&
+            std::abs(currPos.y - resourcePos.y) < epsilon)
         {
-            std::cout << getName() << " is gathering resources at speed " << gatheringSpeed
-                      << " and has a carrying capacity of " << carryingCapacity << " units." << std::endl;
-            while (ressource.getQuantity() > 0 && carryingCapacity > collectedRessources)
+            if (ressource.getQuantity() > 0 && collectedRessources < carryingCapacity)
             {
-                std::cout << getName() << " is waiting for " << gatheringSpeed << " seconds before gathering." << std::endl;
-                std::this_thread::sleep_for(std::chrono::seconds(gatheringSpeed));
-
-                int toCollect = gatheringSpeed;
-                if (ressource.getQuantity() < toCollect)
-                {
-                    toCollect = ressource.getQuantity();
-                }
-
-                ressource.setQuantity(ressource.getQuantity() - toCollect);
-                collectedRessources += toCollect;
-
-                std::cout << getName() << " has gathered " << toCollect << " units. Remaining resources: "
-                          << ressource.getQuantity() << "." << std::endl;
-
-                if (collectedRessources >= carryingCapacity)
-                {
-                    std::cout << getName() << " has reached carrying capacity." << std::endl;
-                    movingToDepot = true;
-                    break;
-                }
+                int gatherAmount = std::min(gatheringSpeed, ressource.getQuantity());
+                ressource.setQuantity(ressource.getQuantity() - gatherAmount);
+                collectedRessources += gatherAmount;
+                std::cout << getName() << " gathering: " << collectedRessources << "/" << carryingCapacity << std::endl;
+                std::this_thread::sleep_for(std::chrono::milliseconds(500));
+            }
+            if (collectedRessources == carryingCapacity || ressource.getQuantity() <= 0)
+            {
+                move(depot.getPosition());
             }
         }
-
-        if (movingToDepot)
+        // Arrivé au depot ?
+        else if (std::abs(currPos.x - depot.getPosition().x) < epsilon &&
+                 std::abs(currPos.y - depot.getPosition().y) < epsilon)
         {
-            setTargetPosition(depotX, depotY);
-            movingToDepot = false;
+            depot.addResource(ressource.getType(), collectedRessources);
+            collectedRessources = 0;
+            move(resourcePos);
         }
-
-        if (getPositionX() == depotX && getPositionY() == depotY)
-        {
-            takeResourcesToDepot(depot);
-            movingToResource = true;
-        }
-
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 }
-
-
-
-void Citizen::moveTowards(Ressource &ressource)
-{
-    int targetX = ressource.getPositionX();
-    int targetY = ressource.getPositionY();
-    setTargetPosition(targetX, targetY);
-}
-
-void Citizen::takeResourcesToDepot(Depot &depot)
-{
-    std::cout << getName() << " is taking resources to the depot." << std::endl;
-    std::this_thread::sleep_for(std::chrono::seconds(2));
-
-    std::cout << getName() << " has deposited resources at the depot." << std::endl;
-    depot.addResource(carriedResourceType, collectedRessources);
-    collectedRessources = 0;
-}
-
-void Citizen::setTargetPosition(int x, int y)
-{
-    int deltaX = x - getPositionX();
-    int deltaY = y - getPositionY();
-    double distance = std::sqrt(deltaX * deltaX + deltaY * deltaY);
-
-    if (distance < getSpeed())
-    {
-        setPosition(x, y);
-    }
-    else
-    {
-        double moveX = (deltaX / distance) * getSpeed();
-        double moveY = (deltaY / distance) * getSpeed();
-        setPosition(getPositionX() + static_cast<int>(moveX), getPositionY() + static_cast<int>(moveY));
-    }
-
-    std::cout << getName() << " is moving to (" << x << ", " << y << "). Current position: ("
-              << getPositionX() << ", " << getPositionY() << ")." << std::endl;
-}
-
 int Citizen::getGatheringSpeed() const { return gatheringSpeed; }
 
 int Citizen::getCarryingCapacity() const { return carryingCapacity; }

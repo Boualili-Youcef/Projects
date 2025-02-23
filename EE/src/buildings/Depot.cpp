@@ -1,6 +1,6 @@
 #include "../include/buildings/Depot.hpp"
 
-Depot::Depot(string name, int health, int capacity, int positionX, int positionY) : Building(name, health, positionX, positionY), capacity(capacity)
+Depot::Depot(const std::string &name, int health, const Position &position, int capacity) : Building(name, health, position), capacity(capacity)
 {
     resources[ResourceType::Gold] = 0;
     resources[ResourceType::Iron] = 0;
@@ -21,7 +21,7 @@ void Depot::addResource(ResourceType type, int quantity)
     }
     else
     {
-        cout << "Quantity cannot be negative!" << endl;
+        std::cout << "Quantity cannot be negative!" << std::endl;
     }
 }
 

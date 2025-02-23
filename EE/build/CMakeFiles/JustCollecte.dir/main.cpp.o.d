@@ -264,4 +264,14 @@ CMakeFiles/JustCollecte.dir/main.cpp.o: \
  /usr/include/c++/13/bits/parse_numbers.h /usr/include/c++/13/thread \
  /usr/include/c++/13/bits/std_thread.h \
  /usr/include/c++/13/bits/unique_ptr.h \
- /usr/include/c++/13/bits/this_thread_sleep.h
+ /usr/include/c++/13/bits/this_thread_sleep.h \
+ /home/youcef/Documents/Projects/EE/include/../include/npc/../Position.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/ressources/Trees/Pine.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/ressources/Trees/Tree.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/ressources/Trees/../Ressource.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/ressources/Trees/../../Position.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/ressources/Trees/../../Position.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/npc/Citizen.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/npc/../buildings/Depot.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/npc/../buildings/Building.hpp \
+ /home/youcef/Documents/Projects/EE/include/../include/npc/../buildings/../Position.hpp

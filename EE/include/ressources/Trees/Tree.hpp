@@ -2,9 +2,11 @@
 
 #include "../Ressource.hpp"
 
+#include "../../Position.hpp"
+
 class Tree : public Ressource
 {
 public:
-    Tree(string name, int quantity, double time_to_gather, int positionX, int positionY, ResourceType  type) ;
+    Tree(const std::string &name, int quantity, double time_to_gather, const Position &Position, ResourceType type);
     ~Tree() = default;
 };

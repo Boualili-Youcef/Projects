@@ -1,8 +1,7 @@
 #pragma once
 
 #include <iostream>
-
-using namespace std;
+#include "../Position.hpp"
 
 enum class ResourceType
 {
@@ -15,22 +14,23 @@ enum class ResourceType
 class Ressource
 {
 private:
-    string name;
+    std::string name;
     int quantity;
     double time_to_gather;
-    int positionX, positionY; // Position de l'unité sur une carte
+    Position position; // Position de la ressource sur une carte
     ResourceType type;
 
 public:
-    Ressource(string name, int quantity, double time_to_gather, int positionX, int positionY, ResourceType type);
+    Ressource(const std::string &name, int quantity, double time_to_gather, const Position &position, ResourceType type);
     virtual ~Ressource() = default;
 
-    const string &getName() const;
+    const std::string &getName() const;
     int getQuantity() const;
     double getTimeToGather() const;
-    int getPositionX() const;
-    int getPositionY() const;
+    Position getPosition() const;
     ResourceType getType() const;
+
+    std::string printTypeResource() const;
 
     void setQuantity(int quantity);
 };
