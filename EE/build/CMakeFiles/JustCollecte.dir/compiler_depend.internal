@@ -3,13 +3,7 @@
 
 CMakeFiles/JustCollecte.dir/main.cpp.o
  /home/youcef/Documents/Projects/EE/main.cpp
- /home/youcef/Documents/Projects/EE/include/buildings/Building.hpp
- /home/youcef/Documents/Projects/EE/include/buildings/Depot.hpp
- /home/youcef/Documents/Projects/EE/include/ressources/Ressource.hpp
- /home/youcef/Documents/Projects/EE/include/npc/Citizen.hpp
  /home/youcef/Documents/Projects/EE/include/npc/Unit.hpp
- /home/youcef/Documents/Projects/EE/include/ressources/Trees/Olk.hpp
- /home/youcef/Documents/Projects/EE/include/ressources/Trees/Tree.hpp
  /usr/include/SFML/Config.hpp
  /usr/include/SFML/Graphics.hpp
  /usr/include/SFML/Graphics/BlendMode.hpp
@@ -90,16 +84,11 @@ CMakeFiles/JustCollecte.dir/main.cpp.o
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
  /usr/include/c++/13/algorithm
- /usr/include/c++/13/backward/auto_ptr.h
  /usr/include/c++/13/backward/binders.h
  /usr/include/c++/13/bit
  /usr/include/c++/13/bits/algorithmfwd.h
- /usr/include/c++/13/bits/align.h
  /usr/include/c++/13/bits/alloc_traits.h
- /usr/include/c++/13/bits/allocated_ptr.h
  /usr/include/c++/13/bits/allocator.h
- /usr/include/c++/13/bits/atomic_base.h
- /usr/include/c++/13/bits/atomic_lockfree_defines.h
  /usr/include/c++/13/bits/basic_ios.h
  /usr/include/c++/13/bits/basic_ios.tcc
  /usr/include/c++/13/bits/basic_string.h
@@ -145,9 +134,6 @@ CMakeFiles/JustCollecte.dir/main.cpp.o
  /usr/include/c++/13/bits/range_access.h
  /usr/include/c++/13/bits/refwrap.h
  /usr/include/c++/13/bits/requires_hosted.h
- /usr/include/c++/13/bits/shared_ptr.h
- /usr/include/c++/13/bits/shared_ptr_atomic.h
- /usr/include/c++/13/bits/shared_ptr_base.h
  /usr/include/c++/13/bits/specfun.h
  /usr/include/c++/13/bits/std_abs.h
  /usr/include/c++/13/bits/std_thread.h
@@ -163,7 +149,6 @@ CMakeFiles/JustCollecte.dir/main.cpp.o
  /usr/include/c++/13/bits/stl_map.h
  /usr/include/c++/13/bits/stl_multimap.h
  /usr/include/c++/13/bits/stl_pair.h
- /usr/include/c++/13/bits/stl_raw_storage_iter.h
  /usr/include/c++/13/bits/stl_tempbuf.h
  /usr/include/c++/13/bits/stl_tree.h
  /usr/include/c++/13/bits/stl_uninitialized.h
@@ -198,7 +183,6 @@ CMakeFiles/JustCollecte.dir/main.cpp.o
  /usr/include/c++/13/ext/aligned_buffer.h
  /usr/include/c++/13/ext/alloc_traits.h
  /usr/include/c++/13/ext/atomicity.h
- /usr/include/c++/13/ext/concurrence.h
  /usr/include/c++/13/ext/numeric_traits.h
  /usr/include/c++/13/ext/string_conversions.h
  /usr/include/c++/13/ext/type_traits.h
@@ -211,12 +195,10 @@ CMakeFiles/JustCollecte.dir/main.cpp.o
  /usr/include/c++/13/limits
  /usr/include/c++/13/locale
  /usr/include/c++/13/map
- /usr/include/c++/13/memory
  /usr/include/c++/13/new
  /usr/include/c++/13/ostream
  /usr/include/c++/13/pstl/execution_defs.h
  /usr/include/c++/13/pstl/glue_algorithm_defs.h
- /usr/include/c++/13/pstl/glue_memory_defs.h
  /usr/include/c++/13/pstl/pstl_config.h
  /usr/include/c++/13/ratio
  /usr/include/c++/13/stdexcept

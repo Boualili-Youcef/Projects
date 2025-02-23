@@ -16,15 +16,15 @@ private:
     ResourceType carriedResourceType;
     bool movingToDepot;
     bool movingToResource;
-    int resourceX, resourceY;
-    int depotX, depotY;
+    float resourceX, resourceY;
+    float depotX, depotY;
 
 public:
-    Citizen(std::string name, int positionX, int positionY, int health, int attack, int speed, int gatheringSpeed, int carryingCapacity);
+    Citizen(std::string name, float positionX, float positionY, int health, int attack, int speed, int gatheringSpeed, int carryingCapacity);
 
     void gatherResources(Ressource &ressource, Depot &depot);
     void takeResourcesToDepot(Depot &depot);
-    void setTargetPosition(int x, int y);
+    void setTargetPosition(float x, float y);
     // New method to move gradually toward a resource.
     void moveTowards(Ressource &ressource);
 

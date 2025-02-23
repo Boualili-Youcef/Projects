@@ -4,7 +4,7 @@
 #include <cmath>
 #include "../include/npc/Citizen.hpp"
 
-Citizen::Citizen(std::string name, int positionX, int positionY, int health, int attack, int speed, int gatheringSpeed, int carryingCapacity)
+Citizen::Citizen(std::string name, float positionX, float positionY, int health, int attack, int speed, int gatheringSpeed, int carryingCapacity)
     : Unit(name, positionX, positionY, health, attack, speed),
       gatheringSpeed(gatheringSpeed),
       carryingCapacity(carryingCapacity),
@@ -75,6 +75,8 @@ void Citizen::gatherResources(Ressource &ressource, Depot &depot)
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 }
+
+
 
 void Citizen::moveTowards(Ressource &ressource)
 {

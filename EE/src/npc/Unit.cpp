@@ -1,50 +1,56 @@
-#include <thread>
-#include <chrono>
 #include <cmath>
 #include "../include/npc/Unit.hpp"
 
-Unit::Unit(string name, int positionX, int positionY, int health, int attack, int speed)
-    : name(name), positionX(positionX), positionY(positionY), health(health), attack(attack), speed(speed) {}
+Unit::Unit(std::string name, float positionX, float positionY, int health, int attack, int speed)
+    : name(name), positionX(positionX), positionY(positionY), health(health), attack(attack), speed(speed), moving(false) {}
 
-string Unit::getName() const { return name; }
-
-int Unit::getPositionX() const { return positionX; }
-
-int Unit::getPositionY() const { return positionY; }
-
+std::string Unit::getName() const { return name; }
+float Unit::getPositionX() const { return positionX; }
+float Unit::getPositionY() const { return positionY; }
 int Unit::getHealth() const { return health; }
-
 int Unit::getAttack() const { return attack; }
-
 int Unit::getSpeed() const { return speed; }
 
-void Unit::move(int targetX, int targetY) {
-    // Calculer la différence entre la position actuelle et la cible
-    int deltaX = targetX - positionX;
-    int deltaY = targetY - positionY;
+void Unit::move(float targetX, float targetY)
+{
+    this->targetX = targetX;
+    this->targetY = targetY;
 
-    // Calculer la distance totale (en ligne droite)
+    float deltaX = targetX - positionX;
+    float deltaY = targetY - positionY;
+
+    // Distance entre l'unité et la cible
     double distance = std::sqrt(deltaX * deltaX + deltaY * deltaY);
 
-    // Nombre de pas nécessaires pour atteindre la cible
-    int steps = static_cast<int>(distance / speed);
-
-    for (int i = 0; i < steps; ++i) {
-        // Normaliser les déplacements pour que l'unité se déplace à la vitesse spécifiée
-        double moveX = (deltaX / distance) * speed;
-        double moveY = (deltaY / distance) * speed;
-
-        setPosition(positionX + static_cast<int>(moveX), positionY + static_cast<int>(moveY));
-
-        // Attendre un peu avant de faire le prochain pas
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    if (distance > 0)
+    {
+        directionX = deltaX / distance;  // Normalisation
+        directionY = deltaY / distance;
+        moving = true;
     }
-
-    // Mettre à jour la position finale
-    setPosition(targetX, targetY);
 }
 
-void Unit::setPosition(int x, int y) {
-    positionX = x;
-    positionY = y;
+void Unit::update(float deltaTime)
+{
+    if (moving)
+    {
+        float moveX = directionX * speed * deltaTime;
+        float moveY = directionY * speed * deltaTime;
+
+        // Vérifier si l'unité atteint la cible
+        if (std::abs(targetX - positionX) <= std::abs(moveX) &&
+            std::abs(targetY - positionY) <= std::abs(moveY))
+        {
+            positionX = targetX;
+            positionY = targetY;
+            moving = false;
+        }
+        else
+        {
+            positionX += moveX;
+            positionY += moveY;
+        }
+    }
 }
+
+
